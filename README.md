@@ -3,7 +3,7 @@
 Personal portfolio: EV projects, robotics teaching, video editing, design work, web apps and skills.
 Plain HTML, CSS and JavaScript. No build step.
 
-**Live:** https://kunalurkude.github.io/Portfolio/
+**Live:** https://kunalurkude.github.io/portfolio/
 
 ## Editing content
 
