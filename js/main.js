@@ -32,7 +32,7 @@
   $$("a", menu).forEach(a => a.addEventListener("click", () => setMenu(false)));
   const links = $$(".nav__links a");
   const spy = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) links.forEach(a => a.classList.toggle("is-current", a.getAttribute("href") === "#" + e.target.id)); }), { rootMargin: "-45% 0px -50% 0px" });
-  ["ev", "teaching", "media", "design", "apps", "skills"].forEach(id => { const el = document.getElementById(id); if (el) spy.observe(el); });
+  ["experience", "ev", "teaching", "media", "design", "apps", "skills"].forEach(id => { const el = document.getElementById(id); if (el) spy.observe(el); });
 
   /* ---------- Hero load ---------- */
   if (document.visibilityState === "hidden" || reduce) root.classList.add("no-anim");
@@ -105,7 +105,7 @@
   lb.addEventListener("click", e => { if (e.target === lb || e.target === lbImg) lb.close(); });
 
   /* ---------- Reveals ---------- */
-  $$(".head, .hats, .case, .case-notes, .strip3, .teach__item, .vgrid, .channel, .logos, .posters, .thumbs, .apps, .sites, .robo, .skills, .contact__card").forEach(el => el.classList.add("reveal"));
+  $$(".tl, .edu, .evrex-now, .build, .nivo, .recog, .head, .hats, .case, .case-notes, .strip3, .teach__item, .vgrid, .channel, .logos, .posters, .thumbs, .apps, .sites, .robo, .skills, .contact__card").forEach(el => el.classList.add("reveal"));
   if (reduce || document.visibilityState === "hidden" || !("IntersectionObserver" in window)) { $$(".reveal").forEach(el => el.classList.add("is-in")); return; }
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -6% 0px", threshold: .04 });
   $$(".reveal").forEach(el => io.observe(el));

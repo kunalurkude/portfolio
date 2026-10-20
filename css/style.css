@@ -376,3 +376,81 @@ button, .btn { -webkit-user-select: none; user-select: none; }
   .hero__copy > *, .portrait, .titleblock, .dim span, .dim__arrow, .reveal { opacity: 1 !important; transform: none !important; }
   .dim__line { stroke-dashoffset: 0; }
 }
+
+/* ---------- Experience timeline ---------- */
+.timeline { list-style: none; margin: 0; padding: 0; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 11.5rem; top: .6rem; bottom: .6rem; width: 0; border-left: 1.5px dashed var(--green-ink); }
+.tl { position: relative; display: grid; grid-template-columns: 10rem 1fr; gap: 3rem; padding-block: 1.2rem; }
+.tl::before { content: ""; position: absolute; left: calc(11.5rem - 6px); top: 1.65rem; width: 11px; height: 11px; border: 2px solid var(--green-ink); background: var(--paper); border-radius: 50%; }
+.tl:first-child::before { background: var(--amber); border-color: var(--ink); }
+.tl__when { font-family: var(--mono); font-size: .85rem; color: var(--muted); padding-top: .25rem; }
+.tl__body { display: grid; gap: .35rem; justify-items: start; padding: 1.1rem 1.3rem; border: 1.5px solid var(--ink); background: var(--card); width: 100%; }
+.tl__body h3 { font-size: 1.25rem; }
+.tl__org { color: var(--green-ink); font-weight: 600; }
+.tl__body ul { margin: .3rem 0 0; padding-left: 1.1rem; color: var(--muted); display: grid; gap: .3rem; }
+.link--btn { background: none; border: 0; padding: 0; margin-top: .4rem; cursor: pointer; text-decoration: underline; font-size: .95rem; }
+.edu { margin-top: 1rem; }
+.edu__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.edu article { display: grid; gap: .35rem; align-content: start; padding: 1.2rem 1.3rem; border: 1px dashed var(--green-ink); border-radius: var(--r); }
+.edu h4 { font-size: 1.15rem; }
+.edu article > p:last-child { color: var(--muted); }
+
+/* ---------- Evrex today ---------- */
+.evrex-now__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.evrex-now article { padding: 1.2rem; border: 1.5px solid var(--ink); background: var(--card); display: grid; gap: .4rem; align-content: start; }
+.evrex-now h4 { font-size: 1.1rem; }
+.evrex-now p { color: var(--muted); font-size: .95rem; }
+.press__btn { padding: .45rem .85rem; border: 1px solid var(--green-ink); border-radius: 999px; background: var(--card); color: var(--green-ink); font-weight: 600; font-size: .92rem; cursor: pointer; }
+.press__item { padding: .45rem .85rem; border: 1px solid var(--line); border-radius: 999px; font-weight: 600; font-size: .92rem; color: var(--muted); }
+
+/* ---------- Builds ---------- */
+.builds { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.build { display: grid; gap: .5rem; align-content: start; padding: 1.4rem; border: 1.5px solid var(--ink); background: var(--card); position: relative; }
+.build::after { content: ""; position: absolute; right: 10px; top: 10px; width: 14px; height: 14px; border-right: 1.5px solid var(--green-ink); border-top: 1.5px solid var(--green-ink); }
+.build h3 { font-size: 1.3rem; }
+.build > p:not(.tl__when) { color: var(--muted); }
+.build__meta { font-size: .9rem; color: var(--green-ink) !important; font-weight: 600; }
+
+/* ---------- NIVO ---------- */
+.nivo { display: grid; grid-template-columns: 1fr 1.1fr; gap: 2rem; align-items: center; padding: clamp(1.3rem, 3vw, 2rem); margin-bottom: 1.6rem; border: 1.5px solid var(--ink); outline: 1px solid var(--ink); outline-offset: -8px; background: var(--card); }
+.nivo > div:first-child { display: grid; gap: .6rem; justify-items: start; }
+.nivo h3 { font-size: clamp(2rem, 4vw, 2.8rem); letter-spacing: -.04em; }
+.nivo__pitch { color: var(--muted); }
+.nivo__demo { display: grid; gap: 4px; font-size: .82rem; }
+.nivo__row { display: grid; grid-template-columns: 6rem repeat(4, 1fr); gap: 4px; }
+.nivo__row > span:first-child { font-weight: 600; align-self: center; }
+.nivo__row--h span { font-family: var(--mono); color: var(--muted); text-align: center; }
+.nivo__row--h span:first-child { text-align: left; }
+.nivo__row i { display: grid; place-items: center; min-height: 2.2rem; border-radius: 6px; font-style: normal; font-weight: 600; background: color-mix(in srgb, var(--ink) 5%, transparent); border: 1px dashed var(--line); }
+.nivo__row i.busy { background: color-mix(in srgb, var(--ink) 14%, transparent); border-style: solid; }
+.nivo__row i.absent { background: #FDE2E1; color: #B42318; border: 1px solid #F4B0AC; }
+.nivo__row i.free { background: color-mix(in srgb, var(--green) 18%, transparent); color: var(--green-ink); border: 1px solid var(--green-ink); }
+.nivo__row i.proxy { background: var(--amber); color: #1a1405; border: 1px solid var(--ink); }
+.is-in .nivo__row i.proxy { animation: proxyIn .9s var(--ease) .5s both; }
+@keyframes proxyIn { from { opacity: 0; transform: scale(.6); } }
+
+/* ---------- Recognition ---------- */
+.recog { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.h3--flush { margin-top: 0; }
+.list { list-style: none; margin: 0; padding: 0; display: grid; }
+.list li { padding: .8rem 0; border-bottom: 1px dashed var(--line); color: var(--muted); }
+.list b { color: var(--ink); }
+.certs { list-style: none; margin: 0; padding: 0; border: 1.5px solid var(--ink); background: var(--card); }
+.certs li { display: grid; grid-template-columns: 3.5rem 1fr; column-gap: .8rem; padding: .75rem 1rem; border-bottom: 1px solid var(--line); }
+.certs li:last-child { border-bottom: 0; }
+.certs span { grid-row: span 2; font-family: var(--mono); font-size: .85rem; color: var(--green-ink); padding-top: .15rem; }
+.certs b { font-weight: 600; }
+.certs em { font-style: normal; color: var(--muted); font-size: .9rem; }
+
+@media (max-width: 1000px) {
+  .timeline::before { left: 6px; }
+  .tl { grid-template-columns: 1fr; gap: .4rem; padding-left: 2rem; }
+  .tl::before { left: 0; top: 1.5rem; }
+  .evrex-now__grid { grid-template-columns: 1fr; }
+  .nivo, .recog { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .edu__grid, .builds { grid-template-columns: 1fr; }
+  .nivo__row { grid-template-columns: 4.6rem repeat(4, 1fr); }
+  .nivo__row i { font-size: .7rem; }
+}

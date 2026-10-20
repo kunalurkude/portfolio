@@ -91,9 +91,9 @@ window.PORTFOLIO = {
   ],
 
   skills: [
-    { group: "Engineering", items: ["Electric vehicle development", "SolidWorks", "3D modelling (CAD/CAM)", "Product design", "Robotics", "Arduino Uno", "Internet of Things"] },
-    { group: "Design & media", items: ["Figma (UI/UX)", "Adobe Illustrator", "Adobe Premiere Pro", "Design thinking", "Microsoft PowerPoint (advanced)"] },
-    { group: "Code & AI", items: ["Web development", "WordPress", "Generative AI", "Prompt engineering", "Generative code", "AI tools"] },
-    { group: "Leadership", items: ["Project management", "Event management", "Mentoring & teaching"] }
+    { group: "Engineering", items: ["Electric vehicle development", "Battery pack design", "SolidWorks", "AutoCAD", "3D modelling (CAD/CAM)", "Design for manufacturing", "Product design", "Robotics", "Arduino & Raspberry Pi", "Internet of Things", "3D printing"] },
+    { group: "Design & media", items: ["UI/UX design (Figma)", "Adobe Illustrator", "Adobe Premiere Pro", "Design thinking", "Microsoft PowerPoint (advanced)"] },
+    { group: "Code & AI", items: ["Web development", "WordPress", "Machine learning & computer vision", "Generative AI", "Prompt engineering", "Claude & AI tools"] },
+    { group: "Leadership", items: ["Startup leadership (CTO)", "Project management", "Event management", "Mentoring & teaching", "Presentation & communication"] }
   ]
 };
