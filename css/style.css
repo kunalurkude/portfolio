@@ -272,7 +272,9 @@ button, .btn { -webkit-user-select: none; user-select: none; }
 .apps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1.5px solid var(--ink); background: var(--card); }
 .app { display: grid; gap: .45rem; align-content: start; padding: 1.3rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); text-decoration: none; transition: background-color .25s var(--ease-out); }
 .app:nth-child(3n) { border-right: 0; }
-.app:nth-last-child(-n+3) { border-bottom: 0; }
+/* Last row: works for any number of apps (a lone last tile spans the full width). */
+.app:last-child:nth-child(3n+1) { grid-column: 1 / -1; border-right: 0; }
+.app:last-child, .app:nth-last-child(2):nth-child(3n+1), .app:nth-last-child(2):nth-child(3n+2), .app:nth-last-child(3):nth-child(3n+1) { border-bottom: 0; }
 .app__k { font-family: var(--mono); font-size: .78rem; color: var(--green-ink); }
 .app strong { font-size: 1.15rem; display: flex; justify-content: space-between; gap: .5rem; }
 .app strong::after { content: "↗"; color: var(--muted); font-weight: 500; transition: transform .3s var(--ease), color .2s; }
@@ -342,7 +344,8 @@ button, .btn { -webkit-user-select: none; user-select: none; }
   .app:nth-child(3n) { border-right: 1px solid var(--line); }
   .app:nth-child(2n) { border-right: 0; }
   .app:nth-last-child(-n+3) { border-bottom: 1px solid var(--line); }
-  .app:nth-last-child(-n+2) { border-bottom: 0; }
+  .app:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .app:last-child, .app:nth-last-child(2):nth-child(odd) { border-bottom: 0; }
   .sites, .robo { grid-template-columns: 1fr 1fr; }
   .skills { grid-template-columns: 1fr 1fr; }
   .skillgrp:nth-child(3) { border-left: 0; }

@@ -72,6 +72,7 @@ window.PORTFOLIO = {
     { name: "Tally Pro", kind: "PWA · Teachers", text: "Total exam marks paper by paper with auto-add and a live grand total.", url: "https://kunalurkude.github.io/tallymarks/" },
     { name: "EV Studio", kind: "Web app · EV", text: "Range, running cost and battery-pack builder for electric vehicles.", url: "https://kunalurkude.github.io/battery/" },
     { name: "EV Studio Pro", kind: "Web app · EV", text: "Advanced battery suite with real-world conditions and 30+ real cells.", url: "https://evrex.in/studio/" },
+    { name: "nue", kind: "PWA · News & stocks", text: "Daily news around the topics you follow, with an NSE, BSE and US stock watchlist and plain-words technical analysis.", url: "https://kunalurkude.github.io/nue/" },
     { name: "Student Points & Marks Tracker", kind: "Tool · School", text: "Class leaderboard and marks manager that syncs with Google Sheets.", url: "https://brightonatl.github.io/leader/" },
     { name: "TaskPulse", kind: "Tool · Productivity", text: "Material-design task manager with free Google Sheets cloud sync.", url: "https://brightonatl.github.io/taskpulse/" }
   ],
